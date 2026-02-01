@@ -1,0 +1,9 @@
+const apiKey = "51627cf63e5bc79aacfe69a1e3492e92";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=bangalore";
+
+async function checkWeather() {
+    const response = await fetch(apiUrl + `&appid=${apiKey}`)
+    let data = await response.json();
+    console.log(data)
+}
+checkWeather(); 
